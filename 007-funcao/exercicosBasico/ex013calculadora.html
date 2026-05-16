@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do Zero - JS</title>
+</head>
+<body>
+    <p>
+        <button onclick="
+            calcBasica('1');
+        ">1</button>
+        <button onclick="
+            calcBasica('2');
+        ">2</button>
+        <button onclick="
+            calcBasica('3');
+        ">3</button>
+    </p>
+    <p>
+        <button onclick="
+            calcBasica('4');
+        ">4</button>
+        <button onclick="
+            calcBasica('5');
+        ">5</button>
+        <button onclick="
+            calcBasica('6');
+        ">6</button>
+    </p>
+    <p>
+        <button onclick="
+            calcBasica('7');
+        ">7</button>
+        <button onclick="
+            calcBasica('8');
+        ">8</button>
+        <button onclick="
+            calcBasica('9');
+        ">9</button>
+    </p>
+    <p>
+        <button onclick="
+            calcBasica('0');
+        ">0</button>
+        <button onclick="
+            calcBasica('+');
+        ">+</button>
+        <button onclick="
+            calcBasica('-');
+        ">-</button>
+    </p>
+    <p>
+        <button onclick="
+            calcBasica('*');
+        ">*</button>
+        <button onclick="
+            calcBasica('/');
+        ">/</button>
+        <button onclick="
+            calc
+
+        ">C</button>
+    </p>
+    <button onclick="
+        calc = eval(calc);
+           /* if (calc === undefined){
+                alert('Vazia'); 
+            } else {
+                console.log(calc);       
+            }*/
+            console.log(calc);
+    ">Mostar</button>
+
+    <script>
+        let calc = '';
+        function calcBasica(valor) {
+            if (valor == '') {
+                alert('Vazia'); 
+                
+            } else {
+                calc += valor
+            }
+            //calc += valor
+            console.log(calc);
+
+        }
+    </script>
+</body>
+</html>

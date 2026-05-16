@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <button>Olá</button>
+    <button class="js-segundo-botao">Segundo Botao</button>
+
+    <script>
+/*
+        //document.body.innerHTML - Altera o corpo do documento HTML via javascript
+        //document.body.innerHTML = 'Olá';
+
+        //document.title - Altera o titulo da pagina via javascript
+        document.title = 'Curso de JavaScript';
+
+        console.log(document.title);
+        console.log(typeof document.title );
+        console.log(document.body);
+
+        console.log(typeof document.body); // E um objecto
+        //como todo objecto tem propriedades e metodos e uma propriedade do body e o .innerHTML
+        console.log(document.body.innerHTML);
+
+        document.body.innerHTML = 'Mundar'
+
+        document.body.innerHTML = '<button>Bom Trabalho</button>'
+        */
+        //Metodo que usamos no DOM - document.querySelector();
+
+        // o document.querySelector() - Pega os elemento do document.body
+        console.log(document.querySelector('button').innerHTML);
+
+        document.querySelector('button')
+            .innerHTML = 'Mudado';
+
+        console.log(document.querySelector('.js-segundo-botao'));
+
+        let botaoElemet = document.querySelector('.js-segundo-botao')
+
+        console.log(botaoElemet);
+
+        window.document;
+
+        window.console.log('25' + 5)//Converte tudo em string e junta não soma
+
+        window.console.log('25' - 5)//Conterte tudo em número e faz a subtração
+
+        window.alert('Bem-Vindo');
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Booleano e Condição - JS</title>
+</head>
+<body>
+    <p>Pedra Papel e Tesoura</p>
+
+    <button onclick="
+        let resultado = '';
+        const numAleatorio = Math.random();
+
+        if (numAleatorio >= 0 && numAleatorio < 1/3) {
+            resultado = 'Pedra';
+        } else if (numAleatorio >= 1/3 && numAleatorio < 2/3 ){
+            resultado = 'Papel';
+        } else if (numAleatorio >= 2/3 && numAleatorio < 1){
+            resultado = 'Tesoura';
+        }
+
+        let resposta = '';
+
+        if (resultado === 'Pedra') {
+            resposta = 'Empatou';
+        } else if(resultado === 'Papel'){
+            resposta = 'Perdeu';
+        } else if(resultado === 'Tesoura'){
+            resposta = 'Ganhou'
+        }
+
+        alert(`Você escolheu Pedra, O PC escolher ${resultado}, você ${resposta}`);
+
+    ">Pedra</button>
+
+    <button onclick="
+        resultado = '';
+        numAleatorio = Math.random();
+
+        if (numAleatorio >= 0 && numAleatorio < 1/3) {
+            resultado = 'Pedra';
+        } else if (numAleatorio >= 1/3 && numAleatorio < 2/3 ){
+            resultado = 'Papel';
+        } else if (numAleatorio >= 2/3 && numAleatorio < 1){
+            resultado = 'Tesoura';
+        }
+
+        if (resultado === 'Pedra') {
+            resposta = 'Ganhou';
+        } else if(resultado === 'Papel'){
+            resposta = 'Empatou';
+        } else{
+            resposta = 'Perdeu';
+        }
+        alert(`Você escolheu Papel, O PC escolher ${resultado}, você ${resposta}`);
+    ">Papel</button>
+
+    <button onclick="
+        resultado = '';
+        numAleatorio = Math.random();
+
+        if (numAleatorio >= 0 && numAleatorio < 1/3) {
+            resultado = 'Pedra';
+        } else if (numAleatorio >= 1/3 && numAleatorio < 2/3 ){
+            resultado = 'Papel';
+        } else if (numAleatorio >= 2/3 && numAleatorio < 1){
+            resultado = 'Tesoura';
+        }
+
+        if (resultado === 'Pedra') {
+            resposta = 'Perdeu';
+        } else if(resultado === 'Papel'){
+            resposta = 'Ganhou';
+        } else{
+            resposta = 'Empatou';
+        }
+        alert(`Você escolheu Tesoura, O PC escolher ${resultado}, você ${resposta}`); ">
+    Tesoura</button>
+
+    <script>
+        
+        //Pedra Papel e Tesoura
+    </script>
+
+</body>
+</html>

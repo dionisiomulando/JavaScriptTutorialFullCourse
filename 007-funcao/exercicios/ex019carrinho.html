@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Carrinho de Compra - JS</title>
+</head>
+<body>
+    <!--Carrinho de Compra-->
+    <button onclick="
+        console.log(lista)
+    ">Mostrar Lista</button>
+
+    <P>
+        <button onclick="
+            carrimhoCompra(4);
+        ">Add +4
+        </button>
+
+        <button onclick="
+            carrimhoCompra(5);
+        ">Add +5
+        </button>
+    </P>
+    <P>
+        <button onclick="
+            carrimhoCompra(-2);
+        ">Retirar -2
+        </button>
+        <button onclick="
+            carrimhoCompra(-3)
+        ">Retirar -3
+        </button>
+    </P>
+
+    <button onclick="
+        lista = 0;
+        carrimhoCompra(lista)
+    ">Limpar Carrinho</button>
+    <script>
+        //Carrinho de Compras:
+        let lista = 0;
+        function carrimhoCompra(artigo) {
+
+            if (lista + artigo > 11) {
+                let falta = 10 - lista;
+                console.log(`A Qtd será excedida! Só pode adicionar mais ${falta}`);
+                return
+            }
+            if (lista + artigo < 0) {
+                if (lista > 0) {
+                    console.log(`Só pode retirar ${lista}`)
+            } else {
+                console.log('O carrinho já está vazio');
+            }
+                return
+            } 
+
+            lista += artigo;
+            console.log(` Qtd atual: ${lista}`);  
+        }
+
+    </script>
+</body>
+</html>

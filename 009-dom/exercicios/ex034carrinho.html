@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Carrinho de Compra - JS</title>
+</head>
+<body>
+    <!--Carrinho de Compra-->
+    <p class="js-resul-carrinho"></p>
+    <button onclick="
+        carrinho.innerHTML = lista;
+    ">Mostrar Lista</button>
+    <P>
+        <button onclick="
+            carrimhoCompra(4);
+        ">Add +4
+        </button>
+
+        <button onclick="
+            carrimhoCompra(5);
+        ">Add +5
+        </button>
+    </P>
+    <P>
+        <button onclick="
+            carrimhoCompra(-2);
+        ">Retirar -2
+        </button>
+        <button onclick="
+            carrimhoCompra(-3)
+        ">Retirar -3
+        </button>
+    </P>
+    <button onclick="
+        lista = 0;
+        carrimhoCompra(lista);
+        
+    ">Limpar Carrinho</button>
+    <script>
+        let lista = 0;
+        document.querySelector('.js-resul-carrinho').innerHTML = `QTD Atual é de: ${lista}`
+        let carrinho = document.querySelector('.js-resul-carrinho');
+        function carrimhoCompra(artigo) {
+            if (lista + artigo > 11) {
+                let falta = 10 - lista;
+                carrinho.innerHTML =`A Qtd será excedida! Só pode adicionar mais ${falta}`;
+                return
+            }
+            if (lista + artigo < 0) {
+                if (lista > 0) {
+                    carrinho.innerHTML =`Só pode retirar ${lista}`;
+            } else {
+                carrinho.innerHTML ='O carrinho já está vazio';
+            }
+                return
+            } 
+            
+            lista += artigo;
+            carrinho.innerHTML = `Qtd atual: ${lista}`;  
+        }
+    </script>
+</body>
+</html>

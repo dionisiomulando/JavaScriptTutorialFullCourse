@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Cara Ou Coroa</title>
+</head>
+<body>
+    <script>
+        const numAliatorio = Math.random();
+        let palpite = 'Cara';
+        let resul = '';
+        if (numAliatorio < 0.5) {
+            resul ='Cara';
+        } else {
+            resul = 'Coroa';
+        }
+        console.log(palpite === resul? 'Você Ganhou':'Você Perdeu');
+    </script>
+</body>
+</html>

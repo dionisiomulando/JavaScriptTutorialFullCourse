@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Loja de Videos Jogos - JS</title>
+</head>
+<body>
+    <script>
+        let artigo = precoProduto = 50;
+        let imposto = 0.20
+        function calcularTotal(){
+            let resul = precoProduto + (precoProduto * imposto);
+            return resul
+        }
+        calcularTotal();
+        let total = calcularTotal() + 5;
+        console.log(total)
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+</head>
+<body>
+      
+    <p>
+        <button onclick="
+            calculadora('1')
+            console.log(`${cal}`);            
+        ">1
+        </button>
+
+        <button onclick="
+            calculadora('2')
+            console.log(`${cal}`);
+        ">2
+        </button>
+
+        <button onclick="
+            calculadora('3')
+            console.log(`${cal}`);
+        ">3
+        </button>
+    </p>
+
+    <p>
+        <button onclick="
+            calculadora('4');
+            console.log(`${cal}`)
+        ">4</button>
+
+        <button onclick=" 
+            calculadora('5'); 
+            console.log(`${cal}`);
+        ">5</button>
+
+        <button onclick="
+            calculadora('6'); 
+            console.log(`${cal}`);
+        ">6</button>    
+    </p>
+    
+    <p>
+        <button onclick="
+            calculadora('7'); 
+            console.log(`${cal}`);
+        ">7</button>
+
+        <button onclick="
+            calculadora('8');
+            console.log(`${cal}`);
+        ">8</button>
+
+        <button onclick="
+            calculadora('9'); 
+            console.log(`${cal}`);
+        ">9</button>
+    </p>
+    
+    <p>
+        <button onclick="
+            calculadora('0')
+            console.log(`${cal}`);
+        ">0
+        </button>
+        <button
+            onclick="
+            calculadora('+')
+            console.log(`${cal}`);            
+        ">
+        +</button>
+
+        <button
+            onclick="
+            calculadora('-');
+            console.log(`${cal}`);            
+        ">
+        -</button>
+    </p>
+
+    <p>
+        <button onclick="
+            cal = eval(cal)
+            console.log(`O resultado é: ${cal}`)
+        ">=</button>
+
+        <button
+            onclick="
+            calculadora('*')
+            console.log(`${cal}`);
+        ">
+        *</button>
+
+        <button
+            onclick="
+            calculadora('/')
+            console.log(`${cal}`);
+        ">
+        /</button>
+    </p>
+
+    <script>
+        console.log( localStorage.getItem('cal'))
+        //Calculadora:
+        let cal = '';
+        function calculadora(valor){
+            cal +=valor;
+        }
+        
+    </script>
+</body>
+</html>

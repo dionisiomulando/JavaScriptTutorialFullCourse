@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compra Melhorado</title>
+</head>
+<body>
+
+    <p>
+        
+        <button onclick="
+            if (carrinho >= 10) {
+                alert(`Tens ${carrinho} artigos, Está cheio no Carrinho`)
+            } else {
+                carrinho++;
+            }
+            console.log(carrinho);
+        ">Add Artigo</button>
+
+        <button onclick="
+            if (carrinho + 2 >= 10) {
+                alert(`Tens ${carrinho} artigos,  Vai passar a quantidade limite`)
+            } else {
+                carrinho+=2;
+            }
+            console.log(carrinho)
+        ">Add +2</button>
+
+        <button  onclick="
+            if (carrinho + 3 >= 10) {
+                alert(`Tens ${carrinho} artigos, Vai passar a quantidade limite`)
+            } else {
+                carrinho+=3;
+            }
+            console.log(carrinho);
+        ">Add +3</button>
+    </p>
+
+    <p>
+        <button onclick="
+            if (carrinho <= 0) {
+                alert(`Tens ${carrinho} artigos, o Carrinho esta vazio`)
+            } else {
+                carrinho--;                 
+            }
+            console.log(carrinho);
+        ">Retirar Artigo</button>
+
+        <button onclick="
+            if (carrinho -2 <= 0) {
+                alert(`Tens ${carrinho} artigos, o Carrinho esta vazio`)
+            } else {
+                carrinho-=2;                 
+            } 
+            console.log(carrinho);
+        ">Add -2</button>
+
+        <button onclick="
+            if (carrinho -3 <= 0) {
+                alert(`Tens ${carrinho} artigos, o Carrinho esta vazio`)
+            } else {
+                carrinho-=3;                 
+            }
+            console.log(carrinho);
+        ">Add -3</button>
+    </p>
+
+    <button onclick="
+        if (carrinho >= 10) {
+            alert(`Tens ${carrinho} artigos, Está cheio no Carrinho`);
+        } else if (carrinho > 0){
+            console.log(`Tens ${carrinho} artigos no Carrinho`);
+        }
+    
+    ">Mostrar Qtd</button>
+    <script>
+        let carrinho = 0;
+    </script>
+</body>
+</html>

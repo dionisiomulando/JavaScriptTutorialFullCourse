@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Variaveis - JS</title>
+</head>
+<body>
+    <button type="button" onclick="console.log(`Qtd Carrinho: ${mostrarQtd}`);">Mostar Qtd</button>
+
+    <button type="button" onclick="mostrarQtd++; 
+    console.log(`Qtd Carrinho: ${mostrarQtd}`)">Add Carrinho</button>
+
+    <button type="button" onclick="
+        mostrarQtd+=2;
+        console.log(`Qtd Carrinho: ${mostrarQtd}`);
+    ">Adicionar +2</button>
+
+    <button type="button" onclick="
+        mostrarQtd += 3;
+        console.log(`Qtd Carrinho ${mostrarQtd}`)
+    ">Adicionar +3</button>
+
+    <button type="button" onclick="
+        mostrarQtd = 0;
+        console.log(`Carrinho Limpo ${mostrarQtd}`)
+    ">Limpar Lista</button>
+
+    <script>
+        let mostrarQtd = 0;
+    </script>
+</body>
+</html>

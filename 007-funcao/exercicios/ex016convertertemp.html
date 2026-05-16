@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Temperatura - JS</title>
+</head>
+<body>
+    <script>
+        //7d
+        function converFahrenheit(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+        console.log(converFahrenheit(25))
+
+        //7e
+        function converCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5/9
+        }
+        console.log(converCelsius(86))
+
+        //7f
+        function converTemp(graus, unidade) {
+            let resul
+            if (unidade === 'C') {
+                resul = converFahrenheit(graus);
+                return `${resul}F`;
+            } else if (unidade === 'F') {
+                resul = converCelsius(graus);
+                return `${resul}C`;                
+            } else {
+                return 'Temperatura Invalida';
+            }
+        }
+        console.log(converTemp(25, 'C'))
+        console.log(converTemp(86, 'F'))
+    </script>
+</body>
+</html>

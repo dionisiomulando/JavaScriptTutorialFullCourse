@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra Papel e Tisoura - JS</title>
+</head>
+<body>
+    <button onclick="
+        resulPedraPapel('Pedra')
+    ">Pedra</button>
+
+    <button onclick="
+        resulPedraPapel('Papel')
+    ">Papel</button>
+
+    <button onclick="
+        resulPedraPapel('Tesoura')
+    ">Tesoura</button>
+        
+    <button onclick="
+
+    ">Pontuação</button>
+
+    <script>
+        function resulPedraPapel(ppt) {
+            let resultado = pedraPapelTesoura();
+            if(ppt === 'Pedra'){
+                if (resultado === 'Pedra') {
+                    resposta = 'Empatou';
+                } else if(resultado === 'Papel'){
+                    resposta = 'Perdeu';
+                } else if(resultado === 'Tesoura'){
+                    resposta = 'Ganhou'
+                }
+            }
+
+            if(ppt === 'Papel'){
+                if (resultado === 'Pedra') {
+                    resposta = 'Ganhou';
+                } else if(resultado === 'Papel'){
+                    resposta = 'Empatou';
+                } else{
+                    resposta = 'Perdeu';
+                }
+            }
+            if(ppt === 'Tesoura'){
+                if (resultado === 'Pedra') {
+                    resposta = 'Perdeu';
+                } else if(resultado === 'Papel'){
+                    resposta = 'Ganhou';
+                } else{
+                    resposta = 'Empatou';
+                }
+            }
+            console.log(`Você escolheu ${ppt}, O PC escolher ${resultado}, você ${resposta}`);
+        }
+        function pedraPapelTesoura() {
+            let resultado = '';
+            const numAleatorio = Math.random();
+            if (numAleatorio >= 0 && numAleatorio < 1/3) {
+                resultado = 'Pedra';
+            } else if (numAleatorio >= 1/3 && numAleatorio < 2/3 ){
+                resultado = 'Papel';
+            } else if (numAleatorio >= 2/3 && numAleatorio < 1){
+                resultado = 'Tesoura';
+            }
+            return resultado;
+        }
+    </script>
+
+</body>
+</html>

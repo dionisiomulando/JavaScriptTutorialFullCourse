@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação - JS</title>
+</head>
+<body>
+    <script>
+
+        let prod1 = {
+            nome: 'banana',
+            preco: 1000
+        }
+        let prod2 = {
+            nome: 'Gajaja',
+            preco2: 1200
+        }
+        function ComparePreco(prod1 , prod2 ) {
+            if (prod1.preco > prod2.preco2) {
+                return prod1
+            } else if (prod1.preco < prod2.preco2 ) {
+                return prod2
+            }
+        }
+        console.log(ComparePreco(prod1, prod2))
+    </script>
+</body>
+</html>

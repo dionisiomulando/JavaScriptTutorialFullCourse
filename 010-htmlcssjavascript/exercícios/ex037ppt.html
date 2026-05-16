@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/style.css">
+    <style>
+        
+    </style>
+    <title>Pedra Papel Tessoura - CSS - JS</title>
+</head>
+<body>
+    <p class="css-ppt">Pedra Papel e Tesoura</p>
+    
+    <button onclick="
+        PPT('Pedra');
+    " class="css-ppt-botao" ><img src="../img/pedra-ppt.png" alt="Pedra" class="css-img"></button>
+
+    <button onclick="
+        PPT('Papel')
+    "class="css-ppt-botao"><img src="../img/papel-ppt.png" alt="Papel" class="css-img"></button>
+        
+    <button onclick="
+        PPT('Tesoura')
+    "class="css-ppt-botao"><img src="../img/tesoura-ppt.png" alt="Tesoura" class="css-img"></button>
+
+    <p class="js-resultado css-resultado"></p>
+    <p class="js-escolhas"></p>
+    <p class="js-result-ppt css-pontuacao"></p>
+
+    <button onclick="
+        pontuacao.derrota = 0;
+        pontuacao.empate = 0;
+        pontuacao.vitoria = 0;
+        localStorage.removeItem('pontuacao');
+        atuarizaResultado();
+    " class="css-resetar">Resetar</button>
+
+    <script src="../js/scripts.js">
+    </script>
+</body>
+</html>

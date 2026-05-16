@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização Em tempo Real - DOM</title>
+</head>
+<body>
+    <input class="js-tempo-real" placeholder="Digite alguma coisa" onkeyup="mostrarLetras()">
+    <p class="js-mostar-letras"></p>
+    <script>
+        function mostrarLetras() {
+            let Inputletra = document.querySelector('.js-tempo-real').value;
+            let Paragrafo = document.querySelector('.js-mostar-letras');
+            if(Inputletra === ''){
+                Paragrafo.innerHTML = '"Nada digitado"';
+            } else{
+                Paragrafo.innerHTML = Inputletra;
+            }    
+        }
+    </script>
+</body>
+</html>

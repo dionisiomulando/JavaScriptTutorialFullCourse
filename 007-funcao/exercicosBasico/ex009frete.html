@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Calculador de Frete</title>
+</head>
+<body>
+    <script>
+        function calFrete(peso, distancia, tipoServico) {
+            if (tipoServico === 'normal') {
+                let total = peso * 0.5 + distancia * 0.1;
+                return `O custo para ${peso}kg em ${distancia}km é de ${total}`;
+            } else if (tipoServico === 'expresso') {
+                let total = (peso * 0.5 + distancia * 0.1) * 1.2;
+                return `O custo para ${peso}kg em ${distancia}km é de ${total}`;
+            } else {
+                return 'Serviço Inválido';
+            }
+        }
+        console.log(calFrete(5, 1000, 'normal'))
+    </script>
+</body>
+</html>

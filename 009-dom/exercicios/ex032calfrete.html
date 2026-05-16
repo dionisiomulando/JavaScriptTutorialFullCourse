@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Frete da Amazom</title>
+</head>
+<body>
+
+    <p>Calculadora dde Frete da Amazon</p>
+    <input class="js-cal-frete" onkeydown="pressEnter(event)" placeholder="Digite o Valor">
+    <button onclick="
+        calcularFrete();
+    " class="js-botao-calcular">Calcular</button>
+    <p class="js-resul-calculo"></p>
+
+    <script>
+        function pressEnter(event) {
+            if (event.key === 'Enter') {
+                calcularFrete();
+            }
+        }
+        function calcularFrete() {
+            let inputfrete = document.querySelector('.js-cal-frete').value;
+            let frete = Number(inputfrete) * 100 + 1000;
+
+            if (frete > 4000) {
+                frete = ferete + 1000;
+            }
+            document.querySelector('.js-resul-calculo').innerHTML = `O valor do Frete é: ${frete / 100}`;
+        }
+    </script>
+</body>
+</html>

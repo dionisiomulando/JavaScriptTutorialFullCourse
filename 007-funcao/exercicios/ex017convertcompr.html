@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Comprimento</title>
+</head>
+<body>
+    <script>
+        //7g
+        function convertCompri(num, de, para) {
+            let resul;
+            if(de === 'milhas' && para === 'km'){
+                resul = num * 1.6;
+                return `${resul} km`;
+            } else if (de === 'km' && para === 'milhas') {
+                resul = num / 1.6;
+                return `${resul} milhas`
+            } else if(de === 'km' && para === 'km'){
+                resul = num * 1;
+                return `${resul}km`
+            }
+            
+        }
+        console.log(convertCompri(50, 'milhas', 'km'));
+        console.log(convertCompri(32, 'km', 'milhas'));
+        console.log(convertCompri(50, 'km', 'km'));
+        
+        //7h
+        function converPes(num, de, para) {
+            let res;
+            if(de === 'milhas' && para === 'km'){
+                res = num * 1.6;
+                return `${num}km correspondem a ${res}pes`
+            }
+        }
+        console.log(converPes(1, 'km', 'pes'));
+    </script>
+</body>
+</html>

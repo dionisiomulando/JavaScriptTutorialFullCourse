@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .botao-add-css{
+            background-color: black;
+            color: rgb(230, 230, 230);
+            border: none;
+            font-size: 20px;
+            padding: 8px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .bota-agendar{
+            color: rgb(0, 0, 0);
+            background-color: aliceblue;
+        }
+    </style>
+    <title>Botões e Logica de Classes - DOM</title>
+</head>
+<body>
+
+    <p>Botão da Amazom </p>
+    <button class="botao-add-css js-botao">Add Carrinho</button>
+
+    <p>Botão da Yango</p>
+    <button class="botao-add-css">Pedir Agora</button>
+    <button class="botao-add-css bota-agendar">Agendar Para Depois</button>
+
+    <script>
+        let addBotao = document.querySelector('.js-botao');
+        console.log(addBotao.classList.contains('js-botao'))              
+    </script>
+</body>
+</html>

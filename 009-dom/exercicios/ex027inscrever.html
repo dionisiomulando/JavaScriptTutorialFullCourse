@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Projecto</title>
+</head>
+<body>
+    <p>Botao de se Inscrever</p>
+    <button onclick="
+         botaoInscrever()
+    " class="js-inscrever"> INSCREVER </button>
+
+    <script>
+        function botaoInscrever() {
+            let inscreverElem = document.querySelector('.js-inscrever');
+            if (inscreverElem.innerText === 'INSCREVER') {
+                //usamos o innerText por causa dos espacos no botao
+                inscreverElem.innerHTML = 'INSCRITO';
+            } else {
+                inscreverElem.innerHTML = 'INSCREVER';
+            }
+        }
+    </script>
+</body>
+</html>

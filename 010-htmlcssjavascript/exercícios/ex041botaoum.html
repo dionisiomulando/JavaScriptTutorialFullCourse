@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .js-botoes {
+            border: none;
+            background-color: green;
+            color: beige;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+        .css-botoes{
+            background-color: rgb(209, 0, 0);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+    <title>Três Botões Um Assende e Outro Apaga</title>
+</head>
+<body>
+
+    <button onclick="
+        botaoJogar('.js-bt-jogar')
+    " class="js-botoes js-bt-jogar css-botoes">Jogar</button>
+
+    <button onclick="
+        botaoJogar('.js-bt-musica');
+    "class="js-botoes js-bt-musica css-botoes">Música</button>
+
+    <button onclick="
+        botaoJogar('.js-bt-tech');
+    "class="js-botoes js-bt-tech css-botoes">Tecnologia</button>
+
+    <script>
+        function botaoJogar(selec){
+            let botoesJogar = document.querySelector(selec)
+            if (!botoesJogar.classList.contains('css-botoes')) {
+                botaoLigarUma();
+                botoesJogar.classList.add('css-botoes')
+            } else {
+                botoesJogar.classList.remove('css-botoes')
+            }
+        }
+        function botaoLigarUma() {
+            let apenasUm = document.querySelector('.css-botoes');
+            if(apenasUm){
+                apenasUm.classList.remove('css-botoes')
+            }
+        }
+    </script>
+</body>
+</html>

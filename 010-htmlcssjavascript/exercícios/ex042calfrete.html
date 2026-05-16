@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .css-resul-calculo{
+            color: rgb(212, 2, 2);
+            font-size: 15px;
+        }
+    </style>
+    <title>Calculadora de Frete da Amazom</title>
+</head>
+<body>
+
+    <p>Calculadora dde Frete da Amazon</p>
+    <input class="js-cal-frete" onkeydown="pressEnter(event)" placeholder="Digite o Valor">
+    <button onclick="
+        calcularFrete();
+    " class="js-botao-calcular">Calcular</button>
+    <p class="js-resul-calculo"></p>
+
+    <script>
+        function pressEnter(event) {
+            if (event.key === 'Enter') {
+                calcularFrete();
+            }
+        }
+        function calcularFrete() {
+            let paraResul = document.querySelector('.js-resul-calculo')
+            let inputfrete = document.querySelector('.js-cal-frete').value;
+            let frete = Number(inputfrete);
+
+            if (frete < 0) {
+                if (paraResul.classList.contains('js-resul-calculo')){
+                    paraResul.classList.add('css-resul-calculo');
+                    paraResul.innerHTML = `O Valor do Frete Não Pode Ser Negativo`; 
+                }
+            } else {
+                if (frete <= 49) {
+                frete += 10;
+            }
+            paraResul.classList.remove('css-resul-calculo')
+            paraResul.innerHTML = `O valor do Frete é: ${frete.toFixed(2)}`;
+            }
+        }
+    </script>
+</body>
+</html>

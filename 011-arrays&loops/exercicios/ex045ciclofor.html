@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos de Loops</title>
+</head>
+<body>
+    <script>
+        /*
+        for(let i = 0; i <= 10; i += 2){
+            console.log(i);
+        }
+        
+        for(let i = 5; i >= 0; i--){
+            console.log(i);
+        }
+        
+       let i = 0
+       while (i <= 10) {
+            console.log(i);
+            i += 2;   
+       }
+
+        i = 5;
+       while(i >= 0){
+        console.log(i);
+        i--
+       }*/
+    /*
+        let nums = [1, 2, 3];
+        let novoNums = [];
+        for (let i = 0; i < nums.length; i++) {
+            novoNums.push(nums[i] + 1);
+        }
+        console.log(novoNums);
+        */
+    /*
+        function Addum(arrays) {
+            let nums = [1, 2, 3];
+            let novoNums = [];
+            for (let i = 0; i < nums.length; i++) {
+                novoNums.push(nums[i] + 1);
+            }
+            return novoNums;
+        }
+        console.log(Addum([]))
+*/
+        function AddOne(array) {
+            const result = [];
+            for (let i = 0; i < array.length; i++) {
+                result.push(array[i]);    
+            }
+            return result;
+        }
+        console.log(AddOne([1, 2, 3]));
+        console.log(AddOne([-2, -1, 0, 99]))
+    </script>
+</body>
+</html>

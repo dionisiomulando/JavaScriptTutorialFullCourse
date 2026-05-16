@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Basico do DOM</title>
+</head>
+<body>
+    <button onclick="
+        botaoCaraCoroa('Cara')
+    ">Cara</button>
+
+    <button onclick="
+        botaoCaraCoroa('Coroa')
+    ">Coroa</button>
+
+    <p class="js-caracoroa"></p>
+    <script>
+        function botaoCaraCoroa(caraoucoroa) {
+            /*
+            if (caraoucoroa === 'Cara') {
+                document.querySelector('.js-caracoroa').innerHTML = `Você escolheu: ${caraoucoroa}`;
+            } else if (caraoucoroa === 'Coroa') {
+                document.querySelector('.js-caracoroa').innerHTML = `Você escolheu: ${caraoucoroa}`;
+            }*/
+           document.querySelector('.js-caracoroa')
+            .innerHTML = `Você escolheu: ${caraoucoroa}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status do Usuario - JS</title>
+</head>
+<body>
+    <script>
+        function statusUsuario(idade) {
+            if (idade < 18) {
+                return `${idade} Menor de Idade`;
+            } else if (idade >= 18 && idade < 60) {
+                return `${idade} Adulto`
+            } else {
+                return `${idade} Idoso`;
+            }
+        }
+        console.log(statusUsuario(18))
+    </script>
+</body>
+</html>

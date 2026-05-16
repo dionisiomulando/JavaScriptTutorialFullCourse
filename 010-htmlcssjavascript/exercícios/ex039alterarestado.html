@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .js-botao-onoff{
+            background-color: rgb(109, 1, 1);
+            color: white;
+            border: none;
+            padding: 8px;
+            font-size: 20px
+        }
+        .js-botao-on{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <title>Alternância de Estado - DOM</title>
+</head>
+<body>
+    <button onclick="
+        alterarEstado();
+    " class="js-botao-onoff">Precionar</button>
+
+    <script>
+        function alterarEstado() {
+            let botaoOnOff = document.querySelector('.js-botao-onoff');
+            if (!botaoOnOff.classList.contains('.js-botao-onoff')) {
+                botaoOnOff.classList.add('js-botao-on')
+            } else {
+                botaoOnOff.classList.remove('js-botao-on')
+            } 
+        }
+            
+    </script>
+</body>
+</html>

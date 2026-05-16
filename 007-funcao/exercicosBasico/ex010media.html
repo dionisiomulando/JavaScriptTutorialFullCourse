@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analise de Desempenho</title>
+</head>
+<body>
+    <script>
+        function mediaFinal(nota1, nota2) {
+            let media = (nota1 + nota2) / 2
+            if (media > 7) {
+                return 'Aprovado';
+            } else if (media < 6.9 || media > 4) {
+                return 'Recurso';
+            } else {
+                return 'Reprovado';
+            }
+        }
+        console.log(mediaFinal(7, 10));
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input e Eventos - DOM</title>
+</head>
+<body>
+
+    <input class="js-receber-nome" placeholder="Digite o seu Nome"
+        onkeydown="pressEnter(event)">
+
+    <button onclick="
+        exibirNome();
+    ">Submeter</button>
+
+    <p class="js-nome"></p>
+
+    <script>
+        function pressEnter(event) {
+            if (event.key === 'Enter') {
+                exibirNome();
+            }
+        }
+        function exibirNome() {
+
+            let receberNome = document.querySelector('.js-receber-nome').value;
+
+            document.querySelector('.js-nome').innerHTML = `Seu nome é: ${receberNome}`;
+        }
+    </script>
+
+</body>
+</html>

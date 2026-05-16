@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios</title>
+</head>
+<body>
+    <script>
+        function minMax(num) {
+            //criamos um objecto que recebe um array que começa com Zero
+            let result = {
+                numMin: num[0],
+                numMaximo: num[0]
+            }
+            //precorremos o array no ciclo com (podemos começar com o 1)
+            for (let i = 0; i < num.length; i++) {
+                let numeros = num[i];
+            //Verificamo se o numero atual que inicia o array for menor que o numero que o numero minimo do objecto. Então o numero mimimo do objecto vai ser receber o numero do array
+                if (numeros < result.numMin) {
+                    result.numMin = numeros;
+                } else {
+                    result.numMaximo = numeros;
+                }
+                
+            }
+            return result
+        }
+        console.log(minMax([-2, 0, 3, 5, 2.6, 9, 10]))
+    </script>
+</body>
+</html>

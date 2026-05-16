@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+<body>
+    <script>
+        function superConversor(valor, de, para) {
+            if (de === 'km' && para === 'milhas') {
+                return valor * 0.62;
+            } else if (de === 'milhas' && para === 'km') {
+                return valor * 1.61;
+            } else {
+                return 'Conversão não Suportada'
+            }
+        }
+        console.log(superConversor(20, 'milhas','km'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Variaveis 002 - JS</title>
+</head>
+<body>
+    <button onclick="alert(CarQtd);">
+        Mostrar Qtd
+    </button>
+
+    <button onclick="
+        CarQtd++
+        console.log(`Você Adicionou ${CarQtd}`)">Add Carrinho</button>
+
+    <button onclick="
+        CarQtd+=2;
+        console.log(`Adicionaste ${CarQtd}`);">Add +2
+    </button>
+
+    <button onclick="
+        CarQtd+=3;
+        console.log(`Adicionaste ${CarQtd}`);">Add +3
+    </button>
+
+    <button onclick="
+        CarQtd *= 0;
+        console.log(`Limpaste a lista ${CarQtd}`);">Limpar
+    </button>
+
+    <script>
+        let CarQtd = 0;
+    </script>
+</body>
+</html>

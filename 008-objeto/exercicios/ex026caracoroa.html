@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cara ou Coroa</title>
+</head>
+
+<body>
+
+  <button onclick="
+    resultCaraCoroa('Cara')
+  ">Cara</button>
+
+  <button onclick="
+    resultCaraCoroa('Coroa')
+  ">Coroa</button>
+  <button onclick="
+    caracoroa.Cara = 0;
+    caracoroa.Coroa = 0;
+    localStorage.removeItem('CaraOuCoroa');
+  ">Reiniciar</button>
+
+  <script>
+    let caracoroa = JSON.parse(localStorage.getItem('CaraOuCoroa')) || {
+      Cara: 0,
+      Coroa: 0
+    };
+    function resultCaraCoroa(result) {
+      let restosta = CaraCoroa();
+      let veredito = '';
+      if (result === 'Cara') {
+        if (restosta === 'Coroa') {
+          veredito = 'Voce Perdeu';
+        } else if(restosta === 'Cara'){
+          veredito = 'Voce Ganhou';
+        }
+      } else if (result === 'Coroa') {
+        if (restosta === 'Cara') {
+          veredito = 'Voce Perdeu';
+        } else if(restosta === 'Coroa'){
+          veredito = 'Voce Ganhou'
+        }
+      }
+
+      if (veredito === 'Voce Ganhou') {
+        caracoroa.Cara += 1;
+      } else if (veredito === 'Voce Perdeu') {
+        caracoroa.Coroa += 1;
+      }
+
+      localStorage.setItem('CaraOuCoroa', JSON.stringify(caracoroa));
+
+      alert(`Escolheste ${result} PC escolheu ${restosta} ${veredito}
+Vitoria: ${caracoroa.Cara}, Derrota: ${caracoroa.Coroa}`)
+
+    }
+    
+    function CaraCoroa() {  
+      let numeroAleatorio = Math.random();
+      if (numeroAleatorio > 0 && numeroAleatorio < 1/5) {
+        return 'Cara';
+      } else if (numeroAleatorio > 1/5 && numeroAleatorio < 1) {
+        return 'Coroa';
+      }
+      
+    }
+  </script>
+</body>
+</html>

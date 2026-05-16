@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ojecto - JS</title>
+</head>
+<body>
+
+    <script>
+        /*
+        const produtos = {
+            nome: 'arroz',
+            preco: 1000
+        };
+        console.log(produtos.nome)
+        console.log(produtos)
+        console.log(typeof produtos.preco)
+        produtos.data = '25/12/1993';
+
+        console.log(produtos)
+
+        delete produtos.data;
+
+        console.log(produtos)
+        */
+       /*
+       const produto = {
+        nome: 'Blusa'
+       }
+       console.log(produto);
+       console.log(produto.nome);
+
+       console.log(produto['nome']);
+
+        const carro = {
+        nome: 'Toyota',
+        'delivery-time': '1 dia',
+        comida: {
+            alimento: 'Arroz',
+            bebida: 'Água'
+        },
+        // quando criamos uma função dentro de um objecto chamamos de metodo.
+        fun: function funcao1(){
+            console.log('Dentro da Função');
+        }
+       }
+
+       console.log(carro);
+       console.log(carro.nome);
+
+       console.log(carro['nome']);
+       console.log(carro['delivery-time']);
+       //Inserir outro elemento
+       console.log(carro.comida.alimento);
+
+       carro.fun()
+
+       console.log(typeof console.log)//metodo)
+
+       console.log(typeof JSON.stringify(carro))
+
+       JSON.parse(JSON.stringify(carro));
+       console.log(JSON.parse(JSON.stringify(carro)));
+
+       console.log(typeof JSON.parse(JSON.stringify(carro)));
+       */
+        console.log('Bem Vindo'.length);
+        console.log('Bem Vindo'.toUpperCase());
+
+        //Objecto com referencias
+
+        const objeto1 = {
+            mensagem: 'Olá'
+        };
+        // Cópia pela referencia
+        const objeto2 = objeto1
+        
+        objeto1.mensagem = 'Bom trabalho';
+
+        console.log(objeto1)
+
+        console.log(objeto2)
+
+        const objeto3 = {
+            mensagem: 'Bom trabalho',
+        }
+
+        console.log(objeto3 === objeto1);
+
+        console.log(objeto1 === objeto2);
+
+        //atalhos para objetos 
+        const objeto4 = {
+            mensagem: 'Bom trabalho',
+        }
+        //const mensagem = objeto4.mensagem
+        //console.log(mensagem)
+        const {mensagem} = objeto4;
+        console.log(mensagem);
+
+        const objeto5 = {
+            produto: 'Arroz',
+            preco: 1800
+        }
+        const {produto, preco} = objeto5;
+
+        console.log(produto);
+
+        console.log(preco);
+
+        //Propriedade abreviada metodo
+        const novoObjeto = {
+            //mensagem: mensagem,
+            mensagem,
+            metodo: function funcao1() {
+                console.log('metodo');
+            }
+        }
+        console.log(novoObjeto)
+        novoObjeto.metodo()
+
+        const novoObjeto1 = {
+            mensagem,
+            metodo1() {
+                console.log('metodo2');
+            }
+        }
+        console.log(novoObjeto)
+        novoObjeto1.metodo1()
+    </script>
+
+</body>
+</html>

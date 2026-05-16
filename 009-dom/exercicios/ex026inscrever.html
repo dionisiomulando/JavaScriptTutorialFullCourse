@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Projecto</title>
+</head>
+<body>
+    <p>Botão de Se increver no YouTube</p>
+    <button onclick="
+        inscrever()
+    " class="js-botao-inscrever">Inscrever</button>
+
+    <script>
+        function inscrever(){
+            let botaoElem = document.querySelector('.js-botao-inscrever');
+
+            if (botaoElem.innerText === 'Inscrever') {
+                botaoElem.innerHTML = 'Inscrito'
+            } else {
+                botaoElem.innerHTML = 'Inscrever'
+            }
+        }
+    </script>
+</body>
+</html>

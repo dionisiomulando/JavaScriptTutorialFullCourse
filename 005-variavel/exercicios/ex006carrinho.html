@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Carrinho de Compra - JS</title>
+</head>
+<body>
+    <!--Carrinho de Compra-->
+    <button onclick="
+        console.log(`Você tem ${lista} artigos no carrinho`);
+    ">Mostrar Lista</button>
+
+    <button onclick="
+        lista +=4;
+        console.log(`Você adicionou mais ${lista} `)
+    ">
+        Add +4
+    </button>
+
+    <button onclick="
+        lista += 5;
+        console.log(`Você adicionou mais ${lista} `);
+    ">
+        Add +5
+    </button>
+
+    <button onclick="
+        lista -=2;
+        console.log(`Você rediziu para ${lista}`);
+    ">Retirar -2
+    </button>
+
+    <button onclick="
+        lista -=3;
+        console.log(`Você rediziu para ${lista}`);
+    ">Retirar -3
+    </button>
+
+    <button onclick="
+        lista = 0;
+        console.log(`Lista tem ${lista} artigo`);
+    ">Limpar Carrinho</button>
+
+    <script>
+        //Carrinho de Compras:
+        let lista = 0;
+    </script>
+</body>
+</html>
